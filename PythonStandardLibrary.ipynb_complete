@@ -67,14 +67,28 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 1,
       "metadata": {
-        "id": "p5Ps2HPVb4Bo"
+        "id": "p5Ps2HPVb4Bo",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "81fc5917-10c4-44af-8524-5db075b73423"
       },
-      "outputs": [],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2024-09-17 21:40:34.142391\n"
+          ]
+        }
+      ],
       "source": [
-        "# Enter code to return the year and name of weekday and run this code block to view the output.\n",
-        "# Hint: The code is one of the examples.\n",
+        "import datetime\n",
+        "\n",
+        "x = datetime.datetime.now()\n",
+        "print(x)\n",
         "\n"
       ]
     },
@@ -92,15 +106,29 @@
     {
       "cell_type": "code",
       "source": [
-        "# Enter code to calculate the square root of 64 and print the result.\n",
-        "# Hint: The code is one of the examples.\n",
-        "\n"
+        "import math\n",
+        "\n",
+        "x = math.sqrt(64)\n",
+        "\n",
+        "print(x)"
       ],
       "metadata": {
-        "id": "-WgZxa-3jyHQ"
+        "id": "-WgZxa-3jyHQ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1b7729a5-f1b2-4744-ac33-b22ea234bf60"
       },
-      "execution_count": null,
-      "outputs": []
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "8.0\n"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "markdown",
@@ -116,28 +144,34 @@
     {
       "cell_type": "code",
       "source": [
-        "# Enter code to convert a python dictionary to JSON and print the result.\n",
-        "# Hint: The code is one of the examples.\n",
-        "\n",
         "import json\n",
         "\n",
-        "# a Python object (dict):\n",
-        "x = {\n",
-        "  \"name\": \"John\",\n",
-        "  \"age\": 30,\n",
-        "  \"city\": \"New York\"\n",
-        "}\n",
+        "# some JSON:\n",
+        "x =  '{ \"name\":\"John\", \"age\":30, \"city\":\"New York\"}'\n",
         "\n",
-        "# convert into JSON:\n",
+        "# parse x:\n",
+        "y = json.loads(x)\n",
         "\n",
-        "\n",
-        "# the result is a JSON string:\n"
+        "# the result is a Python dictionary:\n",
+        "print(y[\"age\"])\n"
       ],
       "metadata": {
-        "id": "RKV8nW1wkPCa"
+        "id": "RKV8nW1wkPCa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ad126a35-54be-4110-810a-bf5ce2895f93"
       },
-      "execution_count": null,
-      "outputs": []
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "30\n"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "markdown",
@@ -153,18 +187,35 @@
     {
       "cell_type": "code",
       "source": [
-        "# Use the re package to search the string to see if it starts with \"The\" and ends with \"Spain\" and print the result.\n",
-        "# Hint: The code is one of the examples.\n",
-        "\n",
         "import re\n",
         "\n",
-        "txt = \"The rain in Spain\"\n"
+        "#Check if the string starts with \"The\" and ends with \"Spain\":\n",
+        "\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.search(\"^The.*Spain$\", txt)\n",
+        "\n",
+        "if x:\n",
+        "  print(\"YES! We have a match!\")\n",
+        "else:\n",
+        "  print(\"No match\")"
       ],
       "metadata": {
-        "id": "zjxNogjClK0K"
+        "id": "zjxNogjClK0K",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "545780ce-47ab-429f-9ac3-1dabe0ff57d8"
       },
-      "execution_count": null,
-      "outputs": []
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "YES! We have a match!\n"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "markdown",
@@ -184,10 +235,10 @@
       "source": [
         "# List the heading under which you found each of the packages in the comments below.\n",
         "\n",
-        "# datetime heading:\n",
-        "# math heading:\n",
-        "# json heading:\n",
-        "# re heading:"
+        "# datetime heading: Data Types\n",
+        "# math heading: Numeric and Mathematical Modules\n",
+        "# json heading: Internet Data Handling\n",
+        "# re heading: Text Processing Services"
       ],
       "metadata": {
         "id": "NSagDFBYm06X"
